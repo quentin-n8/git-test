@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>API Meteo</title>
+</head>
+
+<body>
+
+	<h1>API Meteo</h1>
+
+	<form>
+		<label for="city">Ville:</label><input name="city" type="text">
+		<input type="submit" value="Envoyer">
+	</form>
+
+	<div id="display">
+		
+		<h1 id="current_title"></h1>
+		<h2 id="date_title"></h2>
+
+		<h2>Conditions actuelles :</h2>
+		<img id="current_image"><br>
+		Temperature :<label id="current_temp"></label><br>
+		Vent :<label id="current_wind"></label><br>
+		<label id="current_wether"></label>
+
+		<h2>Prévisions à 4 jours :</h2>
+
+		<h3 id="day1_title"></h3>
+		<img id="day1_image"><br>
+		<label id="day1_wether"></label><br>
+		Temperature minimum :<label id="day1_min_temp"></label>,Temperature maximum :<label id="day1_max_temp"></label>
+		
+		<h3>Heure par heure :</h3>
+
+		0h00 : <img id="day1_0_image"> <label id="day1_0_wether"></label><br>
+		1h00 : <img id="day1_1_image"> <label id="day1_1_wether"></label><br>
+		2h00 : <img id="day1_2_image"> <label id="day1_2_wether"></label><br>
+		3h00 : <img id="day1_3_image"> <label id="day1_3_wether"></label><br>
+		4h00 : <img id="day1_4_image"> <label id="day1_4_wether"></label><br>
+		5h00 : <img id="day1_5_image"> <label id="day1_5_wether"></label><br>
+		6h00 : <img id="day1_6_image"> <label id="day1_6_wether"></label><br>
+		7h00 : <img id="day1_7_image"> <label id="day1_7_wether"></label><br>
+		8h00 : <img id="day1_8_image"> <label id="day1_8_wether"></label><br>
+		9h00 : <img id="day1_9_image"> <label id="day1_9_wether"></label><br>
+		10h00 : <img id="day1_10_image"> <label id="day1_10_wether"></label><br>
+		11h00 : <img id="day1_11_image"> <label id="day1_11_wether"></label><br>
+		12h00 : <img id="day1_12_image"> <label id="day1_12_wether"></label><br>
+		13h00 : <img id="day1_13_image"> <label id="day1_13_wether"></label><br>
+		14h00 : <img id="day1_14_image"> <label id="day1_14_wether"></label><br>
+		15h00 : <img id="day1_15_image"> <label id="day1_15_wether"></label><br>
+		16h00 : <img id="day1_16_image"> <label id="day1_16_wether"></label><br>
+		17h00 : <img id="day1_17_image"> <label id="day1_17_wether"></label><br>
+		18h00 : <img id="day1_18_image"> <label id="day1_18_wether"></label><br>
+		19h00 : <img id="day1_19_image"> <label id="day1_19_wether"></label><br>
+		20h00 : <img id="day1_20_image"> <label id="day1_20_wether"></label><br>
+		21h00 : <img id="day1_21_image"> <label id="day1_21_wether"></label><br>
+		22h00 : <img id="day1_22_image"> <label id="day1_22_wether"></label><br>
+		23h00 : <img id="day1_23_image"> <label id="day1_23_wether"></label><br>
+
+		<h3 id="day2_title"></h3>
+		<img id="day2_image"><br>
+		<label id="day2_wether"></label><br>
+		Temperature minimum :<label id="day2_min_temp"></label>,Temperature maximum :<label id="day2_max_temp"></label>
+		
+		<h3>Heure par heure :</h3>
+
+		0h00 : <img id="day2_0_image"> <label id="day2_0_wether"></label><br>
+		1h00 : <img id="day2_1_image"> <label id="day2_1_wether"></label><br>
+		2h00 : <img id="day2_2_image"> <label id="day2_2_wether"></label><br>
+		3h00 : <img id="day2_3_image"> <label id="day2_3_wether"></label><br>
+		4h00 : <img id="day2_4_image"> <label id="day2_4_wether"></label><br>
+		5h00 : <img id="day2_5_image"> <label id="day2_5_wether"></label><br>
+		6h00 : <img id="day2_6_image"> <label id="day2_6_wether"></label><br>
+		7h00 : <img id="day2_7_image"> <label id="day2_7_wether"></label><br>
+		8h00 : <img id="day2_8_image"> <label id="day2_8_wether"></label><br>
+		9h00 : <img id="day2_9_image"> <label id="day2_9_wether"></label><br>
+		10h00 : <img id="day2_10_image"> <label id="day2_10_wether"></label><br>
+		11h00 : <img id="day2_11_image"> <label id="day2_11_wether"></label><br>
+		12h00 : <img id="day2_12_image"> <label id="day2_12_wether"></label><br>
+		13h00 : <img id="day2_13_image"> <label id="day2_13_wether"></label><br>
+		14h00 : <img id="day2_14_image"> <label id="day2_14_wether"></label><br>
+		15h00 : <img id="day2_15_image"> <label id="day2_15_wether"></label><br>
+		16h00 : <img id="day2_16_image"> <label id="day2_16_wether"></label><br>
+		17h00 : <img id="day2_17_image"> <label id="day2_17_wether"></label><br>
+		18h00 : <img id="day2_18_image"> <label id="day2_18_wether"></label><br>
+		19h00 : <img id="day2_19_image"> <label id="day2_19_wether"></label><br>
+		20h00 : <img id="day2_20_image"> <label id="day2_20_wether"></label><br>
+		21h00 : <img id="day2_21_image"> <label id="day2_21_wether"></label><br>
+		22h00 : <img id="day2_22_image"> <label id="day2_22_wether"></label><br>
+		23h00 : <img id="day2_23_image"> <label id="day2_23_wether"></label><br>
+
+		<h3 id="day3_title"></h3>
+		<img id="day3_image"><br>
+		<label id="day3_wether"></label><br>
+		Temperature minimum :<label id="day3_min_temp"></label>,Temperature maximum :<label id="day3_max_temp"></label>
+		
+		<h3>Heure par heure :</h3>
+
+		0h00 : <img id="day3_0_image"> <label id="day3_0_wether"></label><br>
+		1h00 : <img id="day3_1_image"> <label id="day3_1_wether"></label><br>
+		2h00 : <img id="day3_2_image"> <label id="day3_2_wether"></label><br>
+		3h00 : <img id="day3_3_image"> <label id="day3_3_wether"></label><br>
+		4h00 : <img id="day3_4_image"> <label id="day3_4_wether"></label><br>
+		5h00 : <img id="day3_5_image"> <label id="day3_5_wether"></label><br>
+		6h00 : <img id="day3_6_image"> <label id="day3_6_wether"></label><br>
+		7h00 : <img id="day3_7_image"> <label id="day3_7_wether"></label><br>
+		8h00 : <img id="day3_8_image"> <label id="day3_8_wether"></label><br>
+		9h00 : <img id="day3_9_image"> <label id="day3_9_wether"></label><br>
+		10h00 : <img id="day3_10_image"> <label id="day3_10_wether"></label><br>
+		11h00 : <img id="day3_11_image"> <label id="day3_11_wether"></label><br>
+		12h00 : <img id="day3_12_image"> <label id="day3_12_wether"></label><br>
+		13h00 : <img id="day3_13_image"> <label id="day3_13_wether"></label><br>
+		14h00 : <img id="day3_14_image"> <label id="day3_14_wether"></label><br>
+		15h00 : <img id="day3_15_image"> <label id="day3_15_wether"></label><br>
+		16h00 : <img id="day3_16_image"> <label id="day3_16_wether"></label><br>
+		17h00 : <img id="day3_17_image"> <label id="day3_17_wether"></label><br>
+		18h00 : <img id="day3_18_image"> <label id="day3_18_wether"></label><br>
+		19h00 : <img id="day3_19_image"> <label id="day3_19_wether"></label><br>
+		20h00 : <img id="day3_20_image"> <label id="day3_20_wether"></label><br>
+		21h00 : <img id="day3_21_image"> <label id="day3_21_wether"></label><br>
+		22h00 : <img id="day3_22_image"> <label id="day3_22_wether"></label><br>
+		23h00 : <img id="day3_23_image"> <label id="day3_23_wether"></label><br>
+
+		<h3 id="day4_title"></h3>
+		<img id="day4_image"><br>
+		<label id="day4_wether"></label><br>
+		Temperature minimum :<label id="day4_min_temp"></label>,Temperature maximum :<label id="day4_max_temp"></label>
+		
+		<h3>Heure par heure :</h3>
+
+		0h00 : <img id="day4_0_image"> <label id="day4_0_wether"></label><br>
+		1h00 : <img id="day4_1_image"> <label id="day4_1_wether"></label><br>
+		2h00 : <img id="day4_2_image"> <label id="day4_2_wether"></label><br>
+		3h00 : <img id="day4_3_image"> <label id="day4_3_wether"></label><br>
+		4h00 : <img id="day4_4_image"> <label id="day4_4_wether"></label><br>
+		5h00 : <img id="day4_5_image"> <label id="day4_5_wether"></label><br>
+		6h00 : <img id="day4_6_image"> <label id="day4_6_wether"></label><br>
+		7h00 : <img id="day4_7_image"> <label id="day4_7_wether"></label><br>
+		8h00 : <img id="day4_8_image"> <label id="day4_8_wether"></label><br>
+		9h00 : <img id="day4_9_image"> <label id="day4_9_wether"></label><br>
+		10h00 : <img id="day4_10_image"> <label id="day4_10_wether"></label><br>
+		11h00 : <img id="day4_11_image"> <label id="day4_11_wether"></label><br>
+		12h00 : <img id="day4_12_image"> <label id="day4_12_wether"></label><br>
+		13h00 : <img id="day4_13_image"> <label id="day4_13_wether"></label><br>
+		14h00 : <img id="day4_14_image"> <label id="day4_14_wether"></label><br>
+		15h00 : <img id="day4_15_image"> <label id="day4_15_wether"></label><br>
+		16h00 : <img id="day4_16_image"> <label id="day4_16_wether"></label><br>
+		17h00 : <img id="day4_17_image"> <label id="day4_17_wether"></label><br>
+		18h00 : <img id="day4_18_image"> <label id="day4_18_wether"></label><br>
+		19h00 : <img id="day4_19_image"> <label id="day4_19_wether"></label><br>
+		20h00 : <img id="day4_20_image"> <label id="day4_20_wether"></label><br>
+		21h00 : <img id="day4_21_image"> <label id="day4_21_wether"></label><br>
+		22h00 : <img id="day4_22_image"> <label id="day4_22_wether"></label><br>
+		23h00 : <img id="day4_23_image"> <label id="day4_23_wether"></label><br>
+
+	</div>
+
+
+
+	<script src="meteo.js"></script>
+
+</body>
+</html>

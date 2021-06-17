@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>User List</title>
+</head>
+
+<body>
+
+	<h1>User List</h1>
+
+	
+	<form>
+		Prenom : <input id="input_prenom" value="prenom">
+		Age : <input id="input_age" value="age">
+		Role : 
+		<select id="input_role" size=1 value="role">	
+			<option value="utilisateur">utilisateur</option>
+			<option value="administrateur">administrateur</option>
+		</select>
+
+	<button id="form_submit">Créer</button>
+	</form><br>
+
+	<form>
+		ID : <input id="modif_id" value="ID">
+		Prenom : <input id="modif_prenom" value="prenom">
+		Age : <input id="modif_age" value="age">
+		Role : 
+		<select id="modif_role" size=1 value="role">	
+			<option value="utilisateur">utilisateur</option>
+			<option value="administrateur">administrateur</option>
+		</select>
+
+	<button id="modif_submit">Modifier</button>
+	</form><br>
+
+	<button id="tri_id">Tri par ID</button>
+	<button id="tri_nom">Tri par nom</button>
+	<button id="tri_age">Tri par age</button>
+
+	Recherche :<input id="recherche" value="searchValue"><br>
+	
+	<script src="ex3.js"></script>
+
+</body>
+</html>

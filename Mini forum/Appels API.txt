@@ -1,0 +1,27 @@
+Users :
+
+GET /api/user : récupère la liste des utilisateurs
+GET /api/user/3 : récupère l'utilisateur dont l'id est 3
+POST /api/user : crée un nouvel utilisateur. Format JSON : { username: "Toto", password: "motdepasse", passwordConfirm: "motdepasse" }
+PATCH /api/user/3 : modifie l'utilisateur dont l'id est 3. Format JSON : { username: "Toto", password: "motdepasse", passwordConfirm: "motdepasse", oldPassword: "motdepasse" }
+DELETE /api/user/3 : supprime l'utilisateur dont l'id est 3
+
+---
+
+Topics :
+
+GET /api/topic : récupère la liste des sujets
+GET /api/topic/3 : récupère le sujet dont l'id est 3
+POST /api/topic : crée un nouveau sujet. Format JSON : { title: "Mon titre", author: User, date: Date, message: "Mon message" }
+PATCH /api/topic/3 : modifie le sujet dont l'id est 3. Format JSON : { title: "Mon nouveau titre" }
+DELETE /api/topic/3 : supprime le sujet dont l'id est 3, ainsi que tous ses messages
+
+---
+
+Messages :
+
+GET /api/message : récupère la liste des messages
+GET /api/message/3 : récupère le message dont l'id est 3
+POST /api/message : crée un nouveau message. Format JSON : { content: "Mon message", author: User, date: Date }
+PATCH /api/message/3 : modifie le message dont l'id est 3. Format JSON : { content: "Mon nouveau message" }
+DELETE /api/message/3 : supprime le message dont l'id est 3
